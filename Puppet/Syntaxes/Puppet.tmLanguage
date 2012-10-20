@@ -32,7 +32,7 @@
 			<key>begin</key>
 			<string>(?x)^\s*
 					(node|class)\s+
-					((?:[-_A-Za-z0-9".]+::)*[-_A-Za-z0-9".]+)\s* # identifier</string>
+					((?:[/-_A-Za-z0-9".]+::)*[/-_A-Za-z0-9".]+)\s* # identifier</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
