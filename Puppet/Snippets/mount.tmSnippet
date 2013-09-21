@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>mount {
+    '${1:name}':
+        ensure      =&gt; ${2:mounted},
+        device      =&gt; '${3:/dev/sda1}',
+        fstype      =&gt; '${4:ext4}',
+        options     =&gt; '${5:defaults}',
+        ${6:#atboot      =&gt; true,}
+        ${7:#provider    =&gt; parsed,}
+        ${8:#remounts    =&gt; false,}
+        ${9:#target      =&gt; '/etc/fstab';}
+}$0</string>
+    <key>name</key>
+    <string>mount</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>mount</string>
+    <key>uuid</key>
+    <string>413ec4ae-f491-4c12-809c-db2b0c8c537a</string>
+</dict>
+</plist>

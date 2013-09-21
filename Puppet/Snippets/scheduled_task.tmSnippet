@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>scheduled_task {
+    '${1:name}':
+        ensure    =&gt; ${2:present},
+        enabled   =&gt; ${3:true},
+        command   =&gt; '${4:C:\path\to\command.exe}',
+        arguments =&gt; '${5:/flags /to /pass}',
+${6:        trigger   =&gt; \{
+            schedule   =&gt; ${7:daily},
+            every      =&gt; ${8:2},
+            start_date =&gt; '${9:2011-08-31}',
+            start_time =&gt; '${10:08:00}',
+        \}}
+}$0</string>
+    <key>name</key>
+    <string>scheduled_task</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>scheduled_task</string>
+    <key>uuid</key>
+    <string>24aeb6c4-cd2a-4eb8-abba-029caf869514</string>
+</dict>
+</plist>

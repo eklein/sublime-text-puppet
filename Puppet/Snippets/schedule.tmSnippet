@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
     <key>content</key>
-    <string>user {
+    <string>schedule {
     '${1:name}':
-        ensure  =&gt; ${2:present},
-        comment =&gt; '${3:First Last}',
-        home    =&gt; '${4:/home/$1}',
-        #shell   =&gt; '/bin/bash',
-        #uid     =&gt; '501',
-        #gid     =&gt; '20';
+        period      =&gt; ${2:weekly},
+        periodmatch =&gt; ${3:distance},
+        range       =&gt; '${4:1:30 - 4:30}',
+        repeat      =&gt; ${5:1},
+        weekday     =&gt; '${6:Monday}';
 }$0</string>
     <key>name</key>
-    <string>user</string>
+    <string>schedule</string>
     <key>scope</key>
     <string>source.puppet</string>
     <key>tabTrigger</key>
-    <string>user</string>
+    <string>schedule</string>
     <key>uuid</key>
-    <string>831FA574-7FC1-47B7-BDD3-67E3E94E8188</string>
+    <string>ef864f8e-3198-42eb-89be-ee745d6f3b1b</string>
 </dict>
 </plist>

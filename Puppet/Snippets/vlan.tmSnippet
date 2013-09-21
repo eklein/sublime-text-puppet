@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>vlan {
+    '${1:name}':
+        ensure      =&gt; ${3:present},
+        name        =&gt; ${2:101},
+        description =&gt; '${4:vlan description}',
+        device_url  =&gt; '${5:ssh://puppet:letmein@device.domain.com/}',
+        provider    =&gt; ${6:cisco};
+}$0</string>
+    <key>name</key>
+    <string>vlan</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>vlan</string>
+    <key>uuid</key>
+    <string>c0a3cc1d-2edc-4c99-89a8-d3cf151d80ce</string>
+</dict>
+</plist>

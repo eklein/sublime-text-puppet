@@ -2,19 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>content</key>
-	<string>exec { "${1:name}":
-	command =&gt; "${2:/bin/echo}",
-	#path =&gt; "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
-	#refreshonly =&gt; true,
+    <key>content</key>
+    <string>exec {
+    '${1:name}':
+        command     =&gt; '${2:/bin/echo}',
+        logoutput   =&gt; ${3:on_failure},
+        onlyif      =&gt; ${4:['test -f /tmp/file1', 'test -f /tmp/file2']},
+        ${5:#path   =&gt; '/usr/bin:/usr/sbin:/bin:/usr/local/bin',}
+        ${6:#refreshonly =&gt; true,}
+        unless      =&gt; ${7:'grep root /usr/lib/cron/cron.allow 2> /dev/null'};
 }$0</string>
-	<key>name</key>
-	<string>exec</string>
-	<key>scope</key>
-	<string>source.puppet</string>
-	<key>tabTrigger</key>
-	<string>exec</string>
-	<key>uuid</key>
-	<string>849952B4-0D8A-4B5F-996D-35D531AAAE81</string>
+    <key>name</key>
+    <string>exec</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>exec</string>
+    <key>uuid</key>
+    <string>da53589d-58bf-4ad3-ab5d-4540b19aac52</string>
 </dict>
 </plist>

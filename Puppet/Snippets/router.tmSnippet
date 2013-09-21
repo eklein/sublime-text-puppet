@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
     <key>content</key>
-    <string>if ${1:test} {
-    ${2:# enter puppet code}
+    <string>router {
+    '${1:name}':
+        url     =&gt; '${2:ssh://user:pass:enable@host/}',
 }$0</string>
     <key>name</key>
-    <string>if</string>
+    <string>router</string>
     <key>scope</key>
     <string>source.puppet</string>
     <key>tabTrigger</key>
-    <string>if</string>
+    <string>router</string>
     <key>uuid</key>
-    <string>A60AC7AD-8710-4CCB-9A52-D8B84ABDD521</string>
+    <string>fa993d5f-a66e-49ae-808c-132899962b39</string>
 </dict>
 </plist>

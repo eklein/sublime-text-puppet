@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>zfs {
+    '${1:name}':
+        ensure         =&gt; ${2:present},
+        aclinherit     =&gt; ${3:restricted},
+        aclmode        =&gt; ${4:groupmask},
+        atime          =&gt; ${5:on},
+        canmount       =&gt; ${6:noauto},
+        checksum       =&gt; ${7:sha256},
+        compression    =&gt; ${8:gzip-9},
+        copies         =&gt; ${9:3},
+        dedup          =&gt; ${10:off},
+        devices        =&gt; ${11:on},
+        exec           =&gt; ${12:off},
+        logbias        =&gt; ${13:latency},
+        mountpoint     =&gt; ${14:legacy},
+        nbmand         =&gt; ${15:off},
+        primarycache   =&gt; ${16:metadata},
+        provider       =&gt; ${17:zfs},
+        quota          =&gt; ${18:none},
+        readonly       =&gt; ${19:off},
+        recordsize     =&gt; '${20:128k}',
+        refquota       =&gt; ${21:'1024M'},
+        refreservation =&gt; ${22:'512KB'},
+        reservation    =&gt; ${23:'1T'},
+        secondarycache =&gt; ${24:metadata},
+        setuid         =&gt; ${25:on},
+        shareiscsi     =&gt; ${26:on},
+        sharenfs       =&gt; ${27:off},
+        sharesmb       =&gt; ${28:off},
+        snapdir        =&gt; ${29:visible},
+        version        =&gt; ${30:current},
+        volsize        =&gt; '${31:10Gb}',
+        vscan          =&gt; ${32:on},
+        xattr          =&gt; ${33:on},
+        zoned          =&gt; ${34:on};
+}$0</string>
+    <key>name</key>
+    <string>zfs</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>zfs</string>
+    <key>uuid</key>
+    <string>a02bc859-1875-4a54-abd1-e607ecd87f2c</string>
+</dict>
+</plist>

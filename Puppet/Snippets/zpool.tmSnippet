@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>zpool {
+    '${1:pool}':
+        ensure      =&gt; ${2:absent},
+        disk        =&gt; [ '${3:disk1', 'disk2}' ],
+        log         =&gt; [ '${4:disk1', 'disk2}' ],
+        mirror      =&gt; [ '${5:disk1 disk2', 'disk3 disk4}' ],
+        ${6:#provider    =&gt; zpool,}
+        ${7:#raid_parity =&gt; raidz,}
+        raidz       =&gt; [ '${8:disk1 disk2', 'disk3 disk4}' ],
+        spare       =&gt; [ '${9:disk1', 'disk2}' ];
+}$0</string>
+    <key>name</key>
+    <string>zpool</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>zpool</string>
+    <key>uuid</key>
+    <string>9986134a-8632-405a-94c6-8f26694051f9</string>
+</dict>
+</plist>

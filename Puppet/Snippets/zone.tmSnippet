@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>zone {
+    '${1:name}':
+        ensure       =&gt; ${2:configured},
+        autoboot     =&gt; ${3:true},
+        ${4:#clone        =&gt; 'base@zone',}
+        create_args  =&gt; '${5:-f zone.cfg}',
+        dataset      =&gt; [ '${6:dataset1', 'dataset2}' ],
+        ${7:#id           =&gt; 9,}
+        ${8:#inherit      =&gt; [ '' ],}
+        ${9:#install_args =&gt; '',}
+        ip           =&gt; [ '${10:bge0:192.168.0.1', 'bge0:192.168.0.2}' ],
+        iptype       =&gt; ${11:shared},
+        path         =&gt; '${12:/path/to/}',
+        pool         =&gt; Zpool['${13:name}'],
+        provider     =&gt; ${14:solaris},
+        realhostname =&gt; '${15:fully.qualified.domain.name}',
+        shares       =&gt; '${16:100}',
+        sysidcfg     =&gt; template('${17:zones/sysidcfg.erb}');
+}$0</string>
+    <key>name</key>
+    <string>zone</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>zone</string>
+    <key>uuid</key>
+    <string>55176747-0df6-478b-bc82-9a53448ad786</string>
+</dict>
+</plist>

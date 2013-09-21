@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>selmodule { '${1:name}':
+    ensure        =&gt; ${2:present},
+    ${3:#provider      =&gt; selmodule,}
+    selmoduledir  =&gt; '${4:/usr/share/selinux/targeted}',
+    ${5:# selmodulepath =&gt; 'The full path to the compiled .pp policy module.',}
+    syncversion   =&gt; ${6:true};
+}$0</string>
+    <key>name</key>
+    <string>selmodule</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>selmodule</string>
+    <key>uuid</key>
+    <string>c832a05c-f60f-4e41-a40f-53ed4d8ea787</string>
+</dict>
+</plist>

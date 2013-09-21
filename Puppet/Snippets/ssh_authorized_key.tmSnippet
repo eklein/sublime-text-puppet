@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>ssh_authorized_key {
+    '${1:name}':
+        ensure   =&gt; ${2:present},
+        key      =&gt; '${3:AAAAakljsehrkjysdfjkhasdkfhskjghg==}',
+        options  =&gt; '${4:no-X11-forwarding}',
+        type     =&gt; ${5:ssh-rsa},
+        user     =&gt; '${6:root}';
+}$0</string>
+    <key>name</key>
+    <string>ssh_authorized_key</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>ssh_authorized_key</string>
+    <key>uuid</key>
+    <string>a5694250-793a-4219-be34-46c82e782b5b</string>
+</dict>
+</plist>
