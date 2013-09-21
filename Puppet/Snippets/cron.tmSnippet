@@ -3,13 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>cron { "${1:name}":
-	command  => "${2:command}",
-	user     => "${3:root}",
-	month    => "${4:*}",
-	monthday => "${5:*}",
-	hour     => "${6:*}",
-	minute   => "${7:*}",
+	<string>cron {
+    '${1:name}':
+        ensure   => ${2:present},
+        command  => '${3:command}',
+        user     => '${4:root}',
+        month    => '${5:*}',
+        monthday => '${6:*}',
+        hour     => '${7:*}',
+        minute   => '${8:*}',
+        ${9:#provider => crontab};
 }$0</string>
 	<key>name</key>
 	<string>cron</string>
@@ -18,6 +21,6 @@
 	<key>tabTrigger</key>
 	<string>cron</string>
 	<key>uuid</key>
-	<string>C22C1778-E61D-40EC-8E06-4B4A5ABEC0E7</string>
+	<string>55abae0d-ec74-4025-a8d3-107a5d6bfa2d</string>
 </dict>
 </plist>

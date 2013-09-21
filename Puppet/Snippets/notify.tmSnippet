@@ -3,16 +3,19 @@
 <plist version="1.0">
 <dict>
     <key>content</key>
-    <string>if ${1:test} {
-    ${2:# enter puppet code}
+    <string>notify {
+    '${1:name}':
+        name     =&gt; '${2:the name of the message}',
+        message  =&gt; '${3:the message to be sent to the log}',
+        withpath =&gt; ${4:true};
 }$0</string>
     <key>name</key>
-    <string>if</string>
+    <string>notify</string>
     <key>scope</key>
     <string>source.puppet</string>
     <key>tabTrigger</key>
-    <string>if</string>
+    <string>notify</string>
     <key>uuid</key>
-    <string>A60AC7AD-8710-4CCB-9A52-D8B84ABDD521</string>
+    <string>97d3630b-2201-449f-b0e7-69e6dd702ad1</string>
 </dict>
 </plist>

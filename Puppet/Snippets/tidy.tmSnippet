@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>tidy {
+    '${1:name}':
+        path    =&gt; '${2:/path/to/directory}',
+        age     =&gt; '${3:1w}', # 0 -remove all files
+        ${4:#backup  =&gt; File['filename'],}
+        matches =&gt; [ ${5:'[0-9]pub*.tmp', '*.temp', 'tmpfile?'} ],
+        recurse =&gt; ${6:true},
+        rmdirs  =&gt; ${7:true},
+        size    =&gt; ${8:'2048k'},
+        type    =&gt; ${9:ctime};
+}$0</string>
+    <key>name</key>
+    <string>tidy</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>tidy</string>
+    <key>uuid</key>
+    <string>3abbb71b-f9cb-455d-a81a-8f3de8221113</string>
+</dict>
+</plist>

@@ -3,16 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>content</key>
-    <string>if ${1:test} {
-    ${2:# enter puppet code}
+    <string>resources {
+    '${1:name}':
+        purge              =&gt; ${2:true},
+        unless_system_user =&gt; ${3:1010};
 }$0</string>
     <key>name</key>
-    <string>if</string>
+    <string>resources</string>
     <key>scope</key>
     <string>source.puppet</string>
     <key>tabTrigger</key>
-    <string>if</string>
+    <string>resources</string>
     <key>uuid</key>
-    <string>A60AC7AD-8710-4CCB-9A52-D8B84ABDD521</string>
+    <string>97d3630b-2201-449f-b0e7-69e6dd702ad1</string>
 </dict>
 </plist>
