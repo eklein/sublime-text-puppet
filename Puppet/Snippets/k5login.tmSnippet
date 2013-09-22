@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>k5login {
+    '${1:name}':
+        ensure     =&gt; ${2:present},
+        path       =&gt; '${3:/tmp/k5login-example}',
+        mode       =&gt; '${4:644}',
+        principals =&gt; [ ${5:'user1@example', 'user2@example'} ],
+        provider   =&gt; ${6:k5login};
+}$0</string>
+    <key>name</key>
+    <string>k5login</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>k5login</string>
+    <key>uuid</key>
+    <string>f1aaa841-b3a5-4b74-9040-4caaf1876170</string>
+</dict>
+</plist>

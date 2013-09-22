@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>sshkey {
+    '${1:hostname.domain.example}':
+        ensure       =&gt; ${2:present},
+        host_aliases =&gt; [ '${3:10.1.1.10}', '${4:hostname.domain.example}', '${5:hostname}'],
+        key          =&gt; '${6:AAAAakljsehrkjysdfjkhasdkfhskjghg==}',
+        type         =&gt; ${7:ssh-rsa},
+}$0</string>
+    <key>name</key>
+    <string>sshkey</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>sshkey</string>
+    <key>uuid</key>
+    <string>933ddcfa-e159-43fe-b3dd-9bc177b632c1</string>
+</dict>
+</plist>

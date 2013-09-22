@@ -2,17 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>content</key>
-	<string>file { "${1:name}":
-	ensure =&gt; ${2:file},
+    <key>content</key>
+    <string>file {
+    '${1:name}':
+        ensure  =&gt; ${2:file},
+        source  =&gt; 'puppet:///modules/${3:path/to/file}',
+        owner   =&gt; '${4:root}',
+        group   =&gt; '${5:root}',
+        mode    =&gt; '${6:0644}';
 }$0</string>
-	<key>name</key>
-	<string>file</string>
-	<key>scope</key>
-	<string>source.puppet</string>
-	<key>tabTrigger</key>
-	<string>file</string>
-	<key>uuid</key>
-	<string>C84524F5-B248-4A4B-87B9-69DCA93C393F</string>
+    <key>name</key>
+    <string>file</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>file</string>
+    <key>uuid</key>
+    <string>C84524F5-B248-4A4B-87B9-69DCA93C393F</string>
 </dict>
 </plist>

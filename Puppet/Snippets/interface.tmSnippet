@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>interface {
+    '${1:name}':
+        ensure              =&gt; ${2:present},
+        description         =&gt; '${3:Interface description}',
+        device_url          =&gt; '${4:192.168.1.100}',
+        duplex              =&gt; ${5:auto},
+        encapsulation       =&gt; ${6:dot1q},
+        etherchannel        =&gt; ${7:1},
+        ipaddress           =&gt; [ '${8:127.0.0.1', '127.0.1.1/24', 'FE80::21A:2FFF:FE30:ECF0/128}' ],
+        mode                =&gt; ${9:access},
+        native_vlan         =&gt; ${10:101},
+        allowed_trunk_vlans =&gt; ${11:all},
+        speed               =&gt; ${12:auto},
+        provider            =&gt; ${13:cisco};
+}$0</string>
+    <key>name</key>
+    <string>interface</string>
+    <key>scope</key>
+    <string>source.puppet</string>
+    <key>tabTrigger</key>
+    <string>interface</string>
+    <key>uuid</key>
+    <string>8196d829-1713-467e-b268-a1b4e9b29ccf</string>
+</dict>
+</plist>

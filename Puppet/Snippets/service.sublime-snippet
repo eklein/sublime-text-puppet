@@ -1,10 +1,11 @@
 <snippet>
-    <content><![CDATA[service \{ "$1":
-    enable => true,
-	ensure => running,
-	#hasrestart => true,
-	#hasstatus => true,
-	#require => Class["config"],
+    <content><![CDATA[service \{
+    '${1:name}':
+        ensure      => ${2:running},
+        enable      => true,
+        #hasrestart  => true,
+        #hasstatus   => true,
+        #require     => Class['config'];
 \}
 ]]></content>
     <tabTrigger>service</tabTrigger>
