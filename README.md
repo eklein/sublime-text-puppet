@@ -8,9 +8,16 @@ I do not wish to take any credit for his (and others') hard work.
 
 Installation instructions:
 --------------------------
-Copy the Puppet directory to:
+Copy the Puppet directory inside the Packages folder in your sublime data directory:
 
+#####  (osx)
   ~/Library/Application Support/Sublime Text 2/ Packages
+
+#####  (ubuntu/linux)
+  ~/.config/sublime-text-2/Packages
+
+#####  (windows)
+  %APPDATA%\Sublime Text 2\Packages
 
 Restart sublime and you should be good to go.  You can manually set
 puppet syntax highlighting if it's necessary.
