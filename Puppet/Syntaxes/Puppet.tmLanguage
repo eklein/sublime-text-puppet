@@ -47,7 +47,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(?={)</string>
+			<string>(?=[^\$]{)</string>
 			<key>name</key>
 			<string>meta.definition.class.puppet</string>
 			<key>patterns</key>
